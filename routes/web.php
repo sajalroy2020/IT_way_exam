@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/', [AuthController::class, 'profile'])->name('profile');
     Route::get('edit/{id}', [AuthController::class, 'edit'])->name('edit');
     Route::post('update-profile', [AuthController::class, 'updateProfile'])->name('profile-update');
-
 });
+
+Route::get('/', [CategoryController::class, 'categoryList'])->name('category');
+Route::post('add-category', [CategoryController::class, 'categoryListAdd'])->name('add-category');
+
 
 
