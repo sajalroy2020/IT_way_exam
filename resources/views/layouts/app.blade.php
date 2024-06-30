@@ -29,7 +29,7 @@
                 <a class="navbar-brand" href="">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <a class="navbar-brand" href="{{ route('category') }}">
+                <a class="navbar-brand fs-6 ms-5 text-primary" href="{{ route('category') }}">
                     Category add
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
