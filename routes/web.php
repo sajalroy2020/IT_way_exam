@@ -23,7 +23,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
 });
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/', [AuthController::class, 'profile'])->name('profile');
+    Route::get('profile', [AuthController::class, 'profile'])->name('profile');
     Route::get('edit/{id}', [AuthController::class, 'edit'])->name('edit');
     Route::post('update-profile', [AuthController::class, 'updateProfile'])->name('profile-update');
 });
